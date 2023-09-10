@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
             }
             likeButton.setOnClickListener {
                 post.likedByMe = !post.likedByMe
-                   likeButton.setImageResource(
-                       if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_like_24
-                   )
+                likeButton.setImageResource(
+                    if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_like_24
+                )
                 if (post.likedByMe) post.likes++ else post.likes--
                 likesAmount.text = formatBigNumber(post.likes)
             }

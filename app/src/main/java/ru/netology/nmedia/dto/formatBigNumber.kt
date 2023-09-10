@@ -1,5 +1,6 @@
 package ru.netology.nmedia.dto
- fun formatBigNumber(number: Int): String {
+
+fun formatBigNumber(number: Int): String {
     var firstNumber: Int
     var secondNumber: Int
     when (number) {
@@ -8,20 +9,20 @@ package ru.netology.nmedia.dto
             secondNumber = number % 1_000
             return if (secondNumber > 100) {
                 secondNumber /= 100
-                firstNumber.toString()+"."+secondNumber.toString()+"K"
+                firstNumber.toString() + "." + secondNumber.toString() + "K"
             } else {
-                firstNumber.toString()+"K"
+                firstNumber.toString() + "K"
             }
         }
 
         in 10_000..99_999 -> {
             firstNumber = number / 1_000
-            return firstNumber.toString()+"K"
+            return firstNumber.toString() + "K"
         }
 
         in 100_000..999_999 -> {
             firstNumber = number / 1_000
-            return firstNumber.toString()+"K"
+            return firstNumber.toString() + "K"
         }
 
         in 1_000_000..999_999_999 -> {
@@ -29,9 +30,9 @@ package ru.netology.nmedia.dto
             secondNumber = number % 1_000_000
             return if (secondNumber > 100_000) {
                 secondNumber /= 100_000
-                firstNumber.toString()+"."+secondNumber.toString()+"M"
+                firstNumber.toString() + "." + secondNumber.toString() + "M"
             } else {
-                firstNumber.toString()+"M"
+                firstNumber.toString() + "M"
             }
         }
     }
