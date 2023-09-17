@@ -1,4 +1,4 @@
-package ru.netology.nmedia.dto
+package ru.netology.nmedia.functions
 
 fun formatBigNumber(number: Int): String {
     var firstNumber: Int
